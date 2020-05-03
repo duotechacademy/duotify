@@ -18,11 +18,11 @@ import io.duotech.utilities.Driver;
 public class SignUpStepDefs {
 	
     
-static String username ;
-static String firstName;
-static String lastName ;
-static String password ;
-static String email;
+private static String username ;
+private static String firstName;
+private static String lastName ;
+private static String password ;
+private static String email;
 	
 	@Given("I am on homepage")
 	public void i_am_on_homepage() {

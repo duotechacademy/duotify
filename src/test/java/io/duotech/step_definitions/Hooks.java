@@ -21,7 +21,7 @@ public class Hooks {
 	
 	
 	
-	@Before ()
+	@Before ("not @db_only")
 	public void setUp() {
 		
 		Driver.getDriver().manage().timeouts().implicitlyWait(
@@ -31,7 +31,7 @@ public class Hooks {
 
 	}
 	
-	@Before ("@db")
+	@Before ("@db or @db_only")
 	public void setUpDB() {
 		DatabaseUtils.createConnection();
 
@@ -39,7 +39,7 @@ public class Hooks {
 	
 	
 	
-	@After()
+	@After("not @db_only")
 	public void tearDown(Scenario scenario) {
 		if(scenario.isFailed()) {
 			byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
@@ -49,7 +49,7 @@ public class Hooks {
 	}
 
 	
-	@After ("@db")
+	@After ("@db or @db_only")
 	public void tearDownDatbse() {
 
 		DatabaseUtils.close();

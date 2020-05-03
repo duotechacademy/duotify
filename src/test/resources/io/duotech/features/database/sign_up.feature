@@ -1,6 +1,6 @@
 Feature: Sign Up verification with database
 
-@db
+
 	Scenario: Verify sign up data with db
 	
 	  Given I am on homepage

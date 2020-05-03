@@ -59,6 +59,20 @@ public class DatabaseUtils {
     }
     
     
+    public static void updateQuery(String query) {
+        try {
+            statement = connection.createStatement();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        try {
+           int result = statement.executeUpdate(query);
+        } catch (SQLException e) {
+             e.printStackTrace();
+        }
+    }
+    
+    
   
     public static List<List<Object>> getQueryResultList(String query) {
         executeQuery(query);
