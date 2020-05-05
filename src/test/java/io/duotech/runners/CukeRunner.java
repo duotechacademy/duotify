@@ -12,7 +12,9 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		
 		plugin = {
 				"html:target/built-in-html-report",
-				"json:target/Cucumber.json "
+				"json:target/Cucumber.json",
+				"junit:target/Cucumber.xml"
+					
 		
 		},
 					
