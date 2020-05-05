@@ -20,7 +20,7 @@ public class UpdateEmailStepDefs {
 	public void i_log_in_as_a_user(String string) {
 		HomePage hp = new HomePage();
 		hp.loginUsername.sendKeys(string);
-		hp.loginPassword.sendKeys("akmalbek");
+		hp.loginPassword.sendKeys("akmalbekk");
 		hp.loginButton.click();
 
 
