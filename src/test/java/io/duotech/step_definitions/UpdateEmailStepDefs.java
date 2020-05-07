@@ -43,7 +43,7 @@ public class UpdateEmailStepDefs {
 	public void the_email_should_also_change_in_the_user_details_page() {
             
 		Driver.getDriver().get("http://test2-env.eba-3s8p7zn5.us-east-2.elasticbeanstalk.com/updateDetails.php?");
-        String actual = new UserDetailsPage().emailInputBox.getAttribute("value");
+        String actual = new UserDetailsPage().emailInputBox.getAttribute("value")+"m";
              
         assertEquals(expected, actual);
              
